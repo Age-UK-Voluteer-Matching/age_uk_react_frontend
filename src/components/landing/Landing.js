@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 export class Landing extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello world and Welcome to AGE UK Volunteer Matching</h1>
+      <div className="text-center">
+        <h1>Age UK Volunteer Matching</h1>
+        <Link to='/signupvolunteer'>Find a Volunteer</Link>
+        <Link to='/signupvolunteer'>Become a Volunteer</Link>
       </div>
     )
   }
