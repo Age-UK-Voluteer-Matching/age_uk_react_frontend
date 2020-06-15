@@ -2,8 +2,7 @@ import React from 'react';
 import { 
   BrowserRouter, 
   Switch,
-  Route,
-  Link
+  Route
 } from 'react-router-dom';
 import Landing from './components/landing/Landing';
 import Navbar from './components/layouts/Navbar'

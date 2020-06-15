@@ -1,9 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import SignedOutLinks from './SignedOutLinks'
+import SignedInLinks from './SignedInLinks'
 
 const Navbar = () => {
   return (
     <div>
-      This is the Navbar component
+      <Link to='/'>Homepage</Link>
+      <SignedOutLinks />
+      <SignedInLinks />
     </div>
   )
 }
