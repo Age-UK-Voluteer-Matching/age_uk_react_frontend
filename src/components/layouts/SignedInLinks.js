@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom'
 const SignedInLinks = () => {
   return (
     <>
-      <Link to='/account'>My Account</Link>
-      <Link to='/matches'>My Matches</Link>
+    <li className="nav-item">
+      <Link to='/account' className="nav-link">My Account</Link>
+    </li>
+    <li className="nav-item">
+      <Link to='/matches' className="nav-link">My Matches</Link>
+    </li>
     </>
   )
 }

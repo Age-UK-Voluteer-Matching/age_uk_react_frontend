@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom'
 const SignedOutLinks = () => {
   return (
     <>
-      <Link to='/'>Sign In</Link>
-      <Link to='/'>Sign Up</Link>
+    <li className="nav-item">
+      <Link to='/signin' className="nav-link">Sign In</Link>
+    </li>
+    <li className="nav-item">
+      <Link to='/signup' className="nav-link">Sign Up</Link>
+    </li>
     </>
   )
 }
