@@ -12,6 +12,8 @@ import SignIn from './components/authentication/SignIn'
 import SignUp from './components/authentication/SignUp'
 import UserInterests from './components/user/UserInterests'
 import FindMatch from './components/user/FindMatch'
+import UserMatches from './components/user/UserMatches'
+import Account from './components/user/Account'
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path='/login' component={SignIn}/>
           <Route path='/interests' component={UserInterests}/>
           <Route path='/findmatch' component={FindMatch}/>
+          <Route path='/matches' component={UserMatches}/>
+          <Route path='/account/:id' component={Account}/>
         </Switch>
       </div>
     </BrowserRouter>
