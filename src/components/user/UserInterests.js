@@ -20,9 +20,10 @@ class UserInterests extends Component {
 
   render() {
     const choices = this.state.choices.map(choice => {
+      const { id, interest } = choice
       return (
-        <div key={choice.id}>
-          {choice.interest}
+        <div key={id}>
+          {interest}
         </div>
       )
     })

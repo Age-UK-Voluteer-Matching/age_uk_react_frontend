@@ -9,7 +9,9 @@ import Navbar from './components/layouts/Navbar'
 import SignUpVolunteer from './components/authentication/SignUpVolunteer'
 import SignUpUser from './components/authentication/SignUpUser'
 import SignIn from './components/authentication/SignIn'
+import SignUp from './components/authentication/SignUp'
 import UserInterests from './components/user/UserInterests'
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Landing}/>
+          <Route exact path='/signup' component={SignUp}/>
           <Route path='/signupvolunteer' component={SignUpVolunteer}/>
           <Route path='/signupuser' component={SignUpUser}/>
           <Route path='/login' component={SignIn}/>
