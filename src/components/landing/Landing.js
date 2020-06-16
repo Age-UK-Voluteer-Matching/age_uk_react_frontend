@@ -5,7 +5,7 @@ export class Landing extends Component {
     return (
       <div className="text-center">
         <h1>Age UK Volunteer Matching</h1>
-        <Link to='/signupvolunteer'>Find a Volunteer</Link>
+        <Link to='/signupuser'>Find a Volunteer</Link>
         <Link to='/signupvolunteer'>Become a Volunteer</Link>
       </div>
     )
