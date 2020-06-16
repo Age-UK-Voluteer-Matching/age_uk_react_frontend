@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-export class SignUpUser extends Component {
+class SignUpUser extends Component {
   state = {
     email: '',
     password: ''
