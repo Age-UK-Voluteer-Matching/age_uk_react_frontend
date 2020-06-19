@@ -1,34 +1,35 @@
 import React, { Component } from 'react'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 class FindMatch extends Component {
   render() {
+    console.log(this.props.auth, 'hello from inside findmatch')
+    const users = this.props.auth.users.map((user) => {
+      return (<div>
+        <h4>{user.fullName}</h4>
+        <p>{user.email}</p>
+      </div>
+      )
+    })
     return (
       <div>
         <h1>Here are some matches based on your interests.....</h1>
 
-        <div>
-          <h3>Example User</h3>
-          <p>This is some stuff about me!</p>
-          <h5>My interests....</h5>
-          <ul>
-            <li>Music</li>
-            <li>Gardening</li>
-            <li>Cooking</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Example User</h3>
-          <p>This is some stuff about me!</p>
-          <h5>My interests....</h5>
-          <ul>
-            <li>Music</li>
-            <li>Gardening</li>
-            <li>Cooking</li>
-          </ul>
-        </div>
+        {users }
       </div>
     )
   }
 }
 
-export default FindMatch
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    auth: state.auth
+  }
+}
+
+export default compose(
+  connect(mapStateToProps)
+)(FindMatch)
+
+

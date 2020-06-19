@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
 export class Landing extends Component {
   render() {
+    console.log(this.props)
     return (
       <div className="text-center">
         <h1>Age UK Volunteer Matching</h1>
@@ -12,4 +15,14 @@ export class Landing extends Component {
   }
 }
 
-export default Landing
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    auth: state.auth
+  }
+}
+
+export default compose(
+  connect(mapStateToProps)
+)(Landing)
+
