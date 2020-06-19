@@ -14,6 +14,7 @@ import UserInterests from './components/user/UserInterests'
 import FindMatch from './components/user/FindMatch'
 import UserMatches from './components/user/UserMatches'
 import Account from './components/user/Account'
+import UserDetails from './components/user/UserDetails'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path='/findmatch' component={FindMatch}/>
           <Route path='/matches' component={UserMatches}/>
           <Route path='/account/:id' component={Account}/>
+          <Route path='/userdetails' component={UserDetails}/>
         </Switch>
       </div>
     </BrowserRouter>

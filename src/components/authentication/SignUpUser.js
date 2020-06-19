@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux' 
 import { createUser } from '../../store/actions/authActions'
+import { v4 as uuidv4 } from 'uuid';
 class SignUpUser extends Component {
   state = {
+    id: uuidv4(),
     email: '',
-    password: ''
+    password: '',
+    volunteer: false
   }
 
   handleChange = (e) => {
@@ -18,6 +21,7 @@ class SignUpUser extends Component {
     e.preventDefault();
     console.log(this.state)
     this.props.createUser(this.state)
+    this.props.history.push('/userdetails/' + this.state.id)
   }
   render() {
     return (
