@@ -20,7 +20,7 @@ class UserDetails extends Component {
     e.preventDefault();
     console.log(this.state)
     this.props.createUserDetails(this.state)
-    // this.props.history.push('/interests/' + this.state.id)
+    this.props.history.push('/interests/' + this.state.id)
   }
   render() {
     return (

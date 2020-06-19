@@ -4,7 +4,8 @@ export const createUser = (user) => {
     payload: {
       id: user.id,
       email: user.email,
-      password: user.password
+      password: user.password,
+      volunteer: user.volunteer
     }
   }
 }
