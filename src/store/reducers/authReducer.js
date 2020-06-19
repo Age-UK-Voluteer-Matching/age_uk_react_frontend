@@ -15,6 +15,24 @@ const authReducer = (state = initState, action) => {
         ...state, 
         users: newUsers
       }
+    case 'CREATE_USER_DETAILS':
+      console.log('editing the user details')
+      let newUsersDetails = state.users.map((user) => {
+        console.log(user.id, 'user.id')
+        console.log(action.id, 'action.id')
+        if(user.id === action.payload.id) {
+          user.firstName = action.payload.firstName
+          user.lastName = action.payload.lastName
+          user.bio = action.payload.bio
+          return user
+        } else {
+          return user
+        }
+      })
+      return {
+        ...state, 
+        users: newUsersDetails
+      }
     default:
       return state
   }

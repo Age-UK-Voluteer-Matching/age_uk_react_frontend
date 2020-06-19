@@ -31,7 +31,7 @@ function App() {
           <Route path='/findmatch' component={FindMatch}/>
           <Route path='/matches' component={UserMatches}/>
           <Route path='/account/:id' component={Account}/>
-          <Route path='/userdetails' component={UserDetails}/>
+          <Route path='/userdetails/:id' component={UserDetails}/>
         </Switch>
       </div>
     </BrowserRouter>

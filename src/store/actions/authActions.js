@@ -8,3 +8,15 @@ export const createUser = (user) => {
     }
   }
 }
+
+export const createUserDetails = (user) => {
+  return {
+    type: 'CREATE_USER_DETAILS',
+    payload: {
+      id: user.id,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      bio: user.bio
+    }
+  }
+}
