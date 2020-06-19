@@ -6,16 +6,16 @@ class FindMatch extends Component {
     console.log(this.props.auth, 'hello from inside findmatch')
     const users = this.props.auth.users.map((user) => {
       return (<div>
-        <h4>{user.fullName}</h4>
+        <h4>{user.firstName} {user.lastName}</h4>
         <p>{user.email}</p>
+        <p>{user.bio}</p>
       </div>
       )
     })
     return (
       <div>
         <h1>Here are some matches based on your interests.....</h1>
-
-        {users }
+        {users}
       </div>
     )
   }

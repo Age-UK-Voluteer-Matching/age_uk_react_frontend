@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux' 
+import { createUser } from '../../store/actions/authActions'
 class SignUpUser extends Component {
   state = {
     email: '',
@@ -15,6 +17,7 @@ class SignUpUser extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state)
+    this.props.createUser(this.state)
   }
   render() {
     return (
@@ -42,4 +45,10 @@ class SignUpUser extends Component {
   }
 }
 
-export default SignUpUser
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createUser: (id) => { dispatch(createUser(id)) }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(SignUpUser)
