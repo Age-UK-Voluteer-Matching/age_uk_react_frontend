@@ -1,8 +1,8 @@
 const initState = {
   users: [
-    {id: 1, email: 'test@test.com', firstName: 'Stephan', lastName: 'Ellenberger', bio: 'This is a demo bio and here would be everything that I want to say about myself'},
-    {id: 2, email: 'test@test.com', firstName: 'Tooty', lastName: 'Ellenberger', bio: 'This is a demo bio and here would be everything that I want to say about myself'},
-    {id: 3, email: 'test@test.com', firstName: 'Pepsi', lastName: 'Ellenberger', bio: 'This is a demo bio and here would be everything that I want to say about myself'}
+    {id: 1, interests: [{id: 1, interest: 'walking'}], volunteer: false, email: 'test@test.com', firstName: 'Stephan', lastName: 'Ellenberger', bio: 'This is a demo bio and here would be everything that I want to say about myself'},
+    {id: 2, interests: [{id: 1, interest: 'walking'}], volunteer: false, email: 'test@test.com', firstName: 'Tooty', lastName: 'Ellenberger', bio: 'This is a demo bio and here would be everything that I want to say about myself'},
+    {id: 3, interests: [{id: 1, interest: 'walking'}], volunteer: false, email: 'test@test.com', firstName: 'Pepsi', lastName: 'Ellenberger', bio: 'This is a demo bio and here would be everything that I want to say about myself'}
   ]
 }
 

@@ -9,6 +9,9 @@ class FindMatch extends Component {
         <h4>{user.firstName} {user.lastName}</h4>
         <p>{user.email}</p>
         <p>{user.bio}</p>
+        {/* <p>{user.interests.map((interest) => {
+          interest.interest
+        })}</p> */}
       </div>
       )
     })
