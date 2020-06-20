@@ -62,7 +62,7 @@ class UserInterests extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addInterestsToUser: (userInterests) => { dispatch(addInterestsToUser(userInterests))}
+    addInterestsToUser: (userInterests) => { dispatch(addInterestsToUser(userInterests)) }
   }
 }
 
