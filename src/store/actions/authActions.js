@@ -21,3 +21,12 @@ export const createUserDetails = (user) => {
     }
   }
 }
+
+export const addInterestsToUser = (user) => {
+  return {
+    type: 'ADD_USER_INTERESTS',
+    payload: {
+      interests: user.interests
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { connect } from 'react-redux'
+import { addInterestsToUser } from '../../store/actions/authActions'
 
 class UserInterests extends Component {
   state = {
@@ -18,6 +20,12 @@ class UserInterests extends Component {
     console.log(this.state)
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state)
+    this.props.addInterestsToUser(this.state)
+    this.props.history.push('/findmatch')
+  }
   render() {
     const choices = this.state.choices.map(choice => {
       const { id, interest } = choice
@@ -27,19 +35,28 @@ class UserInterests extends Component {
         </div>
       )
     })
+
+    const interests = [
+      'walking', 'music', 'cooking', 'gardening', 'swimming', 'baking', 'reading', 'travelling' 
+    ]
     return (
       <div>
-        <button onClick={() => this.handleClick("music")}>Music</button>
-        <button onClick={() => this.handleClick("walking")}>Walking</button>
-        <button onClick={() => this.handleClick("cooking")}>Cooking</button>
-        <button onClick={() => this.handleClick("gardening")}>Gardening</button>
-        <button onClick={() => this.handleClick("swimming")}>Swimming</button>
-        <button onClick={() => this.handleClick("baking")}>Baking</button>
-        <button onClick={() => this.handleClick("reading")}>Reading</button>
+        <form onSubmit={this.handleSubmit}>
+          {interests.map((interest) => {
+            return <input type="button" value={interest} name={interest} id={interest} onClick={() => this.handleClick(interest)}/>    
+          })}
+          <input type="submit" name="submit" value="Submit Interests" id=""/>
+        </form>
         <h4>Your choices {choices}</h4>
       </div>
     )
   }
 }
 
-export default UserInterests
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addInterestsToUser: (user) => { dispatch(addInterestsToUser(user))}
+  }
+}
+
+export default connect(null, mapDispatchToProps)(UserInterests)
