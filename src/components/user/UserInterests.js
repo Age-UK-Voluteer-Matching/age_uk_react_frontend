@@ -5,6 +5,7 @@ import { addInterestsToUser } from '../../store/actions/authActions'
 
 class UserInterests extends Component {
   state = {
+    userId: this.props.match.params.id,
     choices: [
 
     ]
@@ -22,7 +23,7 @@ class UserInterests extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state)
+    console.log(this.state, 'EIJOAISJDOIJ')
     this.props.addInterestsToUser(this.state)
     this.props.history.push('/findmatch')
   }
@@ -37,13 +38,19 @@ class UserInterests extends Component {
     })
 
     const interests = [
-      'walking', 'music', 'cooking', 'gardening', 'swimming', 'baking', 'reading', 'travelling' 
+      {id: 1, name: 'walking'},
+      {id: 2, name: 'music'},
+      {id: 3, name: 'cooking'},
+      {id: 4, name: 'gardening'},
+      {id: 5, name: 'swimming'},
+      {id: 6, name: 'baking'},
+      {id: 7, name: 'reading'}
     ]
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           {interests.map((interest) => {
-            return <input type="button" value={interest} name={interest} id={interest} onClick={() => this.handleClick(interest)}/>    
+            return <input type="button" key={interest.id} value={interest.name} name={interest.name} id={interest.name} onClick={() => this.handleClick(interest.name)}/>    
           })}
           <input type="submit" name="submit" value="Submit Interests" id=""/>
         </form>
@@ -55,7 +62,7 @@ class UserInterests extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addInterestsToUser: (user) => { dispatch(addInterestsToUser(user))}
+    addInterestsToUser: (userInterests) => { dispatch(addInterestsToUser(userInterests))}
   }
 }
 

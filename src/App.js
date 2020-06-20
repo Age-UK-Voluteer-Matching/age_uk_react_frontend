@@ -27,7 +27,7 @@ function App() {
           <Route path='/signupvolunteer' component={SignUpVolunteer}/>
           <Route path='/signupuser' component={SignUpUser}/>
           <Route path='/login' component={SignIn}/>
-          <Route path='/interests' component={UserInterests}/>
+          <Route path='/interests/:id' component={UserInterests}/>
           <Route path='/findmatch' component={FindMatch}/>
           <Route path='/matches' component={UserMatches}/>
           <Route path='/account/:id' component={Account}/>

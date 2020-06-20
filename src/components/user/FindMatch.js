@@ -5,7 +5,7 @@ class FindMatch extends Component {
   render() {
     console.log(this.props.auth, 'hello from inside findmatch')
     const users = this.props.auth.users.map((user) => {
-      return (<div>
+      return (<div key={user.id}>
         <h4>{user.firstName} {user.lastName}</h4>
         <p>{user.email}</p>
         <p>{user.bio}</p>
