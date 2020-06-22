@@ -33,3 +33,16 @@ code {
   text-decoration: none;
   color: white;
 }
+
+.homepage-logo {
+  width: 400px;
+  margin-top: 80px;
+  margin-bottom: 20px
+}
+
+.authentication-titles {
+  border-bottom: 1px solid black;
+  width: 80%;
+  margin: 20px 0 20px 0;
+  padding: 20px;
+}

@@ -10,7 +10,7 @@ export class Landing extends Component {
     console.log(this.props)
     return (
       <div className="text-center">
-        <img src={logo} style={{width: 400, marginTop: 100}}/> <br/>
+        <img src={logo} className="homepage-logo"/> <br/>
         <Link to='/signupuser' className="homepage-button">Find a Volunteer</Link>
         <Link to='/signupvolunteer' className="homepage-button">Become a Volunteer</Link>
       </div>

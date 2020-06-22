@@ -27,8 +27,8 @@ class SignUpVolunteer extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Thank you for signing up as a volunteer</h1>
+      <div className="container">
+        <h1 className="authentication-titles">Thank you for signing up as a volunteer</h1>
         <h4>If you are looking for a volunteer, click <Link to="/signupuser">Here</Link></h4>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group" >
@@ -39,10 +39,6 @@ class SignUpVolunteer extends Component {
           <div className="form-group">
             <label htmlFor="exampleInputPassword1">Password</label>
             <input type="password" className="form-control" id="password" placeholder="Password" onChange={this.handleChange}/>
-          </div>
-          <div className="form-check">
-            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-            <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
