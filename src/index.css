@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.navbar {
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 5px black;
+}
 .homepage-button {
   display: inline-block;
   font-size: 25px;
@@ -65,10 +69,14 @@ code {
 
 .buttonUnchecked {
   width: 33%;
+  border-radius: 10px;
   height: 40px;
   margin: 1px;
 }
 
+button:focus {
+  -moz-outline-radius: 14px;
+}
 
 .signup-page-options {
   width: 60%;
@@ -87,5 +95,19 @@ code {
 
 .interests-form-submit-button {
   margin-top: 20px;
-  width: 150px
+  width: 150px;
+  border-radius: 20px
+}
+
+.volunteer-cards {
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+}
+
+.profile-image-for-volunteer-cards {
+  border-radius: 50%;
+  width: 125px;
+  height: auto;
+  margin-left: 20%;
+  box-shadow: 0 0 5px black;
 }

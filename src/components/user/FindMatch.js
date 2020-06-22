@@ -5,19 +5,31 @@ class FindMatch extends Component {
   render() {
     console.log(this.props.auth, 'hello from inside findmatch')
     const users = this.props.auth.users.map((user) => {
-      return (<div key={user.id}>
-        <h4>{user.firstName} {user.lastName}</h4>
-        <p>{user.email}</p>
-        <p>{user.bio}</p>
-        <div>{user.interests.map((interest) => {
-          return <p key={interest.id}>{interest.interest}</p>
-        })}</div>
+      return (
+        <div key={user.id} className="row volunteer-cards">
+          <div className="col">
+            <img 
+              src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" 
+              alt="placeholder-image"
+              className="profile-image-for-volunteer-cards"  
+            />
+          </div>
+          <div className="col-6">  
+            <h4>{user.firstName} {user.lastName}</h4>
+            <p>{user.email}</p>
+            <p>{user.bio}</p>
+          </div>
+          <div className="col">  
+            <div>{user.interests.map((interest) => {
+              return <span key={interest.id}>- {interest.interest}<br/></span>
+            })}</div>
+          </div>
       </div>
       )
     })
     return (
-      <div>
-        <h1>Here are some matches based on your interests.....</h1>
+      <div className="container">
+        <h1 className="authentication-titles">Here are some matches based on your interests.....</h1>
         {users}
       </div>
     )
