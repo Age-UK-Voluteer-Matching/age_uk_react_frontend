@@ -56,7 +56,17 @@ code {
 }
 
 .buttonChecked {
-  background: blue
+  background-color: rgba(255, 0, 0, 0.6);
+  color: white;
+  width: 33%;
+  height: 40px;
+  margin: 1px;
+}
+
+.buttonUnchecked {
+  width: 33%;
+  height: 40px;
+  margin: 1px;
 }
 
 
@@ -69,4 +79,13 @@ code {
   margin-bottom: 50px;
   padding: 20px;
   border-bottom: 1px solid black;
+}
+
+.interests-form {
+  margin-top: 80px
+}
+
+.interests-form-submit-button {
+  margin-top: 20px;
+  width: 150px
 }
