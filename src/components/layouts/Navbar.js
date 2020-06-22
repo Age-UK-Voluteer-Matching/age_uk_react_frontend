@@ -2,12 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SignedOutLinks from './SignedOutLinks'
 import SignedInLinks from './SignedInLinks'
+import logo from '../../age_uk_volunteer_png.png'
 
 const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <span style={{fontSize: 20}}>Age UK</span>
+        <Link to="/"><img src={logo} style={{width: 200}}></img></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

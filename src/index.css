@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.homepage-button {
+  display: inline-block;
+  font-size: 25px;
+  font-family: Raleway;
+  border: 1px solid #14337F;
+  text-align: center;
+  min-width: 300px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 14px;
+  box-shadow: 0 0 5px black;
+  background-color: #14337F;
+  color: white;
+  
+}
+
+.homepage-button:hover {
+  box-shadow: 0 0 10px black;
+  text-decoration: none;
+  color: white;
+}
