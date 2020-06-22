@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { addInterestsToUser } from '../../store/actions/authActions'
 
 class UserInterests extends Component {
+  // this code needs to be reviewed as I am confident that this is NOT the best way to do what I want to do. Ugh!
   state = {
     userId: this.props.match.params.id,
     choices: [
@@ -30,7 +31,7 @@ class UserInterests extends Component {
       choices = this.state.choices
       choices.push(choice)
     } else {
-      choices = this.state.choices.filter(interest => interest.interest === e.target.value)  
+      choices = this.state.choices.filter(interest => interest.interest !== e.target.name)  
     }
     this.setState({
       choices
