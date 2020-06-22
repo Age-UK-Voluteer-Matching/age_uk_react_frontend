@@ -24,9 +24,9 @@ class UserDetails extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>Thank you for signing up to find a volunteer.</h1>
-        <h4>Now, tell us a bit about yourself so we can match you with the best person!</h4>
+      <div className="container">
+        <h1 className="authentication-titles">Thank you for signing up to find a volunteer.</h1>
+        <h4 className='authentication-subtitles'>Now, tell us a bit about yourself so we can match you with the best person!</h4>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group" >
             <label htmlFor="exampleInputEmail1">First Name</label>

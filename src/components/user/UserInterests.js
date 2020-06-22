@@ -11,8 +11,10 @@ class UserInterests extends Component {
     ]
   }
 
-  handleClick = (interest) => {
-    let choice = { id: uuidv4(), interest: interest }
+  handleClick = (e) => {
+    e.preventDefault()
+    e.target.classList.toggle("buttonChecked");
+    let choice = { id: uuidv4(), interest: e.target.name }
     let choices = this.state.choices
     choices.push(choice)
     this.setState({
@@ -47,10 +49,18 @@ class UserInterests extends Component {
       {id: 7, name: 'reading'}
     ]
     return (
-      <div>
+      <div className="container text-center">
         <form onSubmit={this.handleSubmit}>
           {interests.map((interest) => {
-            return <input type="button" key={interest.id} value={interest.name} name={interest.name} id={interest.name} onClick={() => this.handleClick(interest.name)}/>    
+            return (
+              <input 
+                type="button" 
+                key={interest.id} 
+                value={interest.name} 
+                name={interest.name} 
+                id={interest.name} 
+                onClick={this.handleClick}
+              />)   
           })}
           <input type="submit" name="submit" value="Submit Interests" id=""/>
         </form>
